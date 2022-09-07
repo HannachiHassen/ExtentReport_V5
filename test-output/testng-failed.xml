@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.extentreports.tests.AttachLogo">
+      <class name="com.extentreports.tests.AttachScreenshots">
         <methods>
-          <include name="attachLogoTest"/>
+          <include name="tearDown"/>
+          <include name="attachScreenShotTest"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.extentreports.tests.AttachLogo -->
+      </class> <!-- com.extentreports.tests.AttachScreenshots -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
