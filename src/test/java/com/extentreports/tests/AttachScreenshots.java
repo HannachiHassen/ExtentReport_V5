@@ -2,8 +2,11 @@ package com.extentreports.tests;
 
 import java.awt.Desktop;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Base64;
 
+import org.apache.commons.compress.utils.IOUtils;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -19,6 +22,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.util.IOUtil;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -62,15 +66,23 @@ public class AttachScreenshots {
 		driver.get("https://www.google.com");		
 		driver.findElement(By.name("q")).sendKeys("Automation",Keys.ENTER);
 		test.pass("Value entered", MediaEntityBuilder.createScreenCaptureFromPath(getScreenshotPath()).build());
-		
+		test.pass("Value entered", MediaEntityBuilder.createScreenCaptureFromBase64String(getScreenshotAsBase64()).build());
 		test.pass("Test finished");		
 	}
 	
 	public String getScreenshotPath() throws IOException {
 		File source=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		String path=System.getProperty("user.dir")+ "\\Screenshots\\image.png";
+		String path=System.getProperty("user.dir")+ "/Screenshots/image.png";
 		FileUtils.copyFile(source, new File(path));
 		
 		return path;		
+	}
+	
+	public String getScreenshotAsBase64() throws IOException {
+		File source=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		String path=System.getProperty("user.dir")+ "/Screenshots/image.png";
+		FileUtils.copyFile(source, new File(path));
+		byte[] imageBytes=IOUtils.toByteArray(new FileInputStream(path));
+		return Base64.getEncoder().encodeToString(imageBytes);		
 	}
 }
