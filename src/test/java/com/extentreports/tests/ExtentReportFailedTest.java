@@ -14,10 +14,12 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public final class ExtentReportFailedTest{
 	
+	/**
+	 * 1. To have all the tests irrespective of test status -->index.html
+	 * 2. To have only the failed test case --> failed-tests-index.html
+	 * @throws IOException 
+	 */
 	
-	//1. To have all the tests irrespective of test status -->index.html
-	//2. To have only the failed test case --> failed-tests-index.html
-
 	private ExtentReportFailedTest() {
 
 	}
