@@ -65,8 +65,9 @@ public class AttachScreenshots {
 		
 		driver.get("https://www.google.com");		
 		driver.findElement(By.name("q")).sendKeys("Automation",Keys.ENTER);
-		test.pass("Value entered", MediaEntityBuilder.createScreenCaptureFromPath(getScreenshotPath()).build());
-		test.pass("Value entered", MediaEntityBuilder.createScreenCaptureFromBase64String(getScreenshotAsBase64()).build());
+		//test.pass("Value entered", MediaEntityBuilder.createScreenCaptureFromPath(getScreenshotPath()).build());
+		//test.pass("Value entered", MediaEntityBuilder.createScreenCaptureFromBase64String(getScreenshotAsBase64()).build());
+		test.pass("Value entered", MediaEntityBuilder.createScreenCaptureFromBase64String(getBase64()).build());
 		test.pass("Test finished");		
 	}
 	
@@ -84,5 +85,9 @@ public class AttachScreenshots {
 		FileUtils.copyFile(source, new File(path));
 		byte[] imageBytes=IOUtils.toByteArray(new FileInputStream(path));
 		return Base64.getEncoder().encodeToString(imageBytes);		
+	}
+	
+	public String getBase64() throws IOException {
+		return ((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);	
 	}
 }
