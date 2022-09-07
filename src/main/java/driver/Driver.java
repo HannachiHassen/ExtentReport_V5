@@ -16,7 +16,7 @@ public final class Driver {
 			WebDriverManager.firefoxdriver().setup();
 			DriverManager.setDriver(new FirefoxDriver());
 		} 
-		//DriverManager.getDriver().get("https://www.google.com");
+		DriverManager.getDriver().get("https://www.google.com");
 	}
 
 	public static void quitDriver() {

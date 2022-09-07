@@ -5,9 +5,12 @@
     <classes>
       <class name="com.extentreports.tests.ExtentReportDemo">
         <methods>
+          <include name="beforeSuite"/>
+          <include name="secondTest"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="extentTest"/>
+          <include name="afterSuite"/>
+          <include name="firstTest"/>
         </methods>
       </class> <!-- com.extentreports.tests.ExtentReportDemo -->
     </classes>
