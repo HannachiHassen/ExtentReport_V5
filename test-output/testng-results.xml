@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-07T18:06:12 EDT" name="Default suite" finished-at="2022-09-07T18:06:27 EDT" duration-ms="15319">
+  <suite started-at="2022-09-07T18:28:35 EDT" name="Default suite" finished-at="2022-09-07T18:28:53 EDT" duration-ms="17811">
     <groups>
     </groups>
-    <test started-at="2022-09-07T18:06:12 EDT" name="Default test" finished-at="2022-09-07T18:06:27 EDT" duration-ms="15319">
-      <class name="com.extentreports.tests.AttachScreenshots">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.extentreports.tests.AttachScreenshots@4d154ccd]" started-at="2022-09-07T18:06:11 EDT" name="setUp" finished-at="2022-09-07T18:06:12 EDT" duration-ms="652" status="PASS">
+    <test started-at="2022-09-07T18:28:35 EDT" name="Default test" finished-at="2022-09-07T18:28:53 EDT" duration-ms="17811">
+      <class name="com.extentreports.tests.ExtentReportDemo">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.extentreports.tests.ExtentReportDemo@1de5f259]" started-at="2022-09-07T18:28:35 EDT" name="setUp" finished-at="2022-09-07T18:28:45 EDT" duration-ms="10164" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="attachScreenShotTest()[pri:0, instance:com.extentreports.tests.AttachScreenshots@4d154ccd]" started-at="2022-09-07T18:06:12 EDT" name="attachScreenShotTest" finished-at="2022-09-07T18:06:27 EDT" duration-ms="15236" status="PASS">
+        <test-method signature="extentTest()[pri:0, instance:com.extentreports.tests.ExtentReportDemo@1de5f259]" started-at="2022-09-07T18:28:45 EDT" name="extentTest" finished-at="2022-09-07T18:28:48 EDT" duration-ms="2160" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- attachScreenShotTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.extentreports.tests.AttachScreenshots@4d154ccd]" started-at="2022-09-07T18:06:27 EDT" name="tearDown" finished-at="2022-09-07T18:06:36 EDT" duration-ms="9053" status="PASS">
+        </test-method> <!-- extentTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.extentreports.tests.ExtentReportDemo@1de5f259]" started-at="2022-09-07T18:28:48 EDT" name="tearDown" finished-at="2022-09-07T18:28:53 EDT" duration-ms="5383" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.extentreports.tests.AttachScreenshots -->
+      </class> <!-- com.extentreports.tests.ExtentReportDemo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

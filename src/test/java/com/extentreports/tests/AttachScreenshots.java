@@ -65,9 +65,11 @@ public class AttachScreenshots {
 		
 		driver.get("https://www.google.com");		
 		driver.findElement(By.name("q")).sendKeys("Automation",Keys.ENTER);
+		
 		//test.pass("Value entered", MediaEntityBuilder.createScreenCaptureFromPath(getScreenshotPath()).build());
 		//test.pass("Value entered", MediaEntityBuilder.createScreenCaptureFromBase64String(getScreenshotAsBase64()).build());
 		test.pass("Value entered", MediaEntityBuilder.createScreenCaptureFromBase64String(getBase64()).build());
+		
 		test.pass("Test finished");		
 	}
 	
