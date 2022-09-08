@@ -11,6 +11,7 @@ import org.testng.ITestResult;
 
 import report.ExtentLogger;
 import report.ExtentReport;
+import utils.ScreenshotUtils;
 
 public class ListenerClass implements ITestListener, ISuiteListener{
 
@@ -46,6 +47,7 @@ public class ListenerClass implements ITestListener, ISuiteListener{
 	public void onTestFailure(ITestResult result) {
 		ExtentLogger.fail(result.getMethod().getMethodName() + " is Failed");
 		ExtentLogger.fail(Arrays.toString(result.getThrowable().getStackTrace()));
+		ScreenshotUtils.getBase64Image();
 	}
 
 	@Override
